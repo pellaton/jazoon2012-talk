@@ -1,6 +1,6 @@
-## Jazoon 2012 Talk 'On Processors, Compilers and @Configurations'
+## Jazoon 2012 Talk *On Processors, Compilers and @Configurations*  
 
-This repository contains all examples, documents and links of my Jazoon 2012 talk with the topic 'On Processors, Compilers and @Configurations'.
+This repository contains all examples, documents and links of the talk.
 
 ### Abstract
 The Pluggable Annotation Processing API allows application developers to write customized annotation processors that can be plugged into the Java compiler to process annotated source files during compilation. The automatic generation of additional source code and customized validations of the annotated classes are the two most important purposes of custom annotation processors.
