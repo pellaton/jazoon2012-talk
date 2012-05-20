@@ -28,6 +28,14 @@ import javax.lang.model.element.TypeElement;
  * Java 6 annotation processor that processes classes annotated with
  * {@code @Configuration}. This processor is meant for source validation during
  * compilation only and does not write any output besides compiler messages.
+ * 
+ * <p>
+ * This example processor checks for two conditions:
+ * </p>
+ * <ul>
+ *   <li>@Configuration annotated classes must not be final</li>
+ *   <li>@Bean annotated methods must not be private</li>
+ * </ul>
  */
 public class JazoonProcessor extends AbstractProcessor {
 
