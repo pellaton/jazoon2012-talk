@@ -1,6 +1,6 @@
-## Jazoon 2012 Talk 'On Processors, Compilers and @Configurations'
+## Jazoon 2012 Talk *On Processors, Compilers and @Configurations*  
 
-This repository contains all examples, documents and links of my Jazoon 2012 talk with the topic 'On Processors, Compilers and @Configurations'.
+This repository contains all examples, documents and links of the talk.
 
 ### Abstract
 The Pluggable Annotation Processing API allows application developers to write customized annotation processors that can be plugged into the Java compiler to process annotated source files during compilation. The automatic generation of additional source code and customized validations of the annotated classes are the two most important purposes of custom annotation processors.
@@ -17,3 +17,6 @@ We will use the missing compile time validation of Spring @Configuration classes
 ### Links
 * The [Jazoon 2012](http://www.jazoon.com) conference
 * The [Spring Configuration Validation Processor](http://code.google.com/p/spring-configuration-validation-processor/) is the open source project this talk is based on
+* Package [javax.annotation.processing](http://docs.oracle.com/javase/7/docs/api/javax/annotation/processing/package-summary.html) API documentation (containing the annotation processor)
+* Package [javax.tools](http://docs.oracle.com/javase/7/docs/api/javax/tools/package-summary.html) API documentation (containing the Java compiler)
+* Spring Annotation class [org.springframework.context.annotation.Configuration](http://static.springsource.org/spring/docs/3.1.x/javadoc-api/org/springframework/context/annotation/Configuration.html) API documentation
