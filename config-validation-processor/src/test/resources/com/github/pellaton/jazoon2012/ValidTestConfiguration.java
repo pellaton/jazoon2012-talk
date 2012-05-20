@@ -1,6 +1,7 @@
 /*
  * *****************************************************************************************************************
  * Copyright 2012 Michael Pellaton
+ *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance
  * with the License. You may obtain a copy of the License at
  *
@@ -23,11 +24,10 @@ import org.springframework.context.annotation.Configuration;
  * A valid {@code @Configuration} class.  
  */
 @Configuration
-public class ValidTestConfiguration {
+public class FinalClassTestConfiguration {
   
   @Bean
-  private String someString() {
+  public String someString() {
     return "";
-  }  
+  } 
 }
-
