@@ -1,0 +1,161 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.github.pellaton</groupId>
+	<artifactId>some-spring-project</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<name>Jazoon 2012 Example of a Spring Configuration Validation Processor</name>
+	<description>An example String project applying the configuration validation processor.</description>
+	<inceptionYear>2012</inceptionYear>
+	<url>https://github.com/pellaton/jazoon2012-talk</url>
+
+	<licenses>
+		<license>
+			<name>Apache 2</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+			<comments>A business-friendly OSS license</comments>
+		</license>
+	</licenses>
+
+	<organization>
+		<name>Michael Pellaton</name>
+		<url>https://github.com/pellaton/jazoon2012-talk</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<id>michael.pellaton@gmail.com</id>
+			<name>Michael Pellaton</name>
+			<email>michael.pellaton@gmail.com</email>
+			<timezone>+1</timezone>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<ciManagement>
+		<system>Jenkins</system>
+		<url>https://www.contrails.ch/hudson/view/Config-Validation/</url>
+	</ciManagement>
+
+	<scm>
+		<url>https://pellaton@github.com/pellaton/jazoon2012-talk.git</url>
+		<connection>scm:git@github.com:pellaton/jazoon2012-talk.git</connection>
+		<developerConnection>scm:git@github.com:pellaton/jazoon2012-talk.git</developerConnection>
+	</scm>
+
+	<prerequisites>
+		<maven>3.0</maven>
+	</prerequisites>
+
+	<properties>
+		<spring.version>3.1.0.RELEASE</spring.version>
+		<junit.version>4.9</junit.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<!-- The annotation processor only needs to be available at compile time -->
+		<dependency>
+			<groupId>com.github.pellaton</groupId>
+			<artifactId>config-validation-processor</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- Test dependencies -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>UTF-8</encoding>
+					<annotationProcessors>
+						<annotationProcessor>com.github.pellaton.jazoon2012.JazoonProcessor</annotationProcessor>
+					</annotationProcessors>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<configuration>
+					<configLocation>.checkstyle.xml</configLocation>
+				</configuration>
+			</plugin>
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>2.3.2</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>2.1.2</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<version>2.8</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>2.3.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.5</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>2.7</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-checkstyle-plugin</artifactId>
+					<version>2.8</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>
