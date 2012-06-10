@@ -13,6 +13,12 @@
  *
  * Contributors:
  *   Michael Pellaton
+ *   
+ *   
+ * This code is derived from the following project published under the same license by the same author:
+ * - http://code.google.com/p/spring-configuration-validation-processor
+ * 
+ * The purpose of this slimmed-down version is to serve as example for a conference presentation.
  * *****************************************************************************************************************
  */
 package com.github.pellaton.jazoon2012;
@@ -24,7 +30,7 @@ import org.springframework.context.annotation.Configuration;
  * A valid {@code @Configuration} class.  
  */
 @Configuration
-public class FinalClassTestConfiguration {
+public class ValidTestConfiguration {
   
   @Bean
   public String someString() {

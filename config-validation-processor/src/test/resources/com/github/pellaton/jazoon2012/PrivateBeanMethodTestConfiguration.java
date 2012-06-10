@@ -1,6 +1,7 @@
 /*
  * *****************************************************************************************************************
  * Copyright 2012 Michael Pellaton
+ *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance
  * with the License. You may obtain a copy of the License at
  *
@@ -12,6 +13,12 @@
  *
  * Contributors:
  *   Michael Pellaton
+ *   
+ *   
+ * This code is derived from the following project published under the same license by the same author:
+ * - http://code.google.com/p/spring-configuration-validation-processor
+ * 
+ * The purpose of this slimmed-down version is to serve as example for a conference presentation.
  * *****************************************************************************************************************
  */
 package com.github.pellaton.jazoon2012;
@@ -23,7 +30,7 @@ import org.springframework.context.annotation.Configuration;
  * A valid {@code @Configuration} class.  
  */
 @Configuration
-public class ValidTestConfiguration {
+public class PrivateBeanMethodTestConfiguration {
   
   @Bean
   private String someString() {
