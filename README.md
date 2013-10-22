@@ -16,7 +16,7 @@ We will use the missing compile time validation of Spring @Configuration classes
 
 ### Links
 * The [Jazoon 2012](http://www.jazoon.com) conference
-* The [Spring Configuration Validation Processor](http://code.google.com/p/spring-configuration-validation-processor/) is the open source project this talk is based on
+* The [Spring Configuration Validation Processor](https://github.com/pellaton/spring-configuration-validation-processor) is the open source project this talk is based on
 * Package [javax.annotation.processing](http://docs.oracle.com/javase/7/docs/api/javax/annotation/processing/package-summary.html) API documentation (containing the annotation processor)
 * Package [javax.tools](http://docs.oracle.com/javase/7/docs/api/javax/tools/package-summary.html) API documentation (containing the Java compiler)
 * Spring Annotation class [org.springframework.context.annotation.Configuration](http://static.springsource.org/spring/docs/3.1.x/javadoc-api/org/springframework/context/annotation/Configuration.html) API documentation
